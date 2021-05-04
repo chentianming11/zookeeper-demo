@@ -34,11 +34,11 @@ public class PathCacheTest {
 
         // 创建path cache
         /**
-         * 注意：如果new PathChildrenCache(client, PATH, true)中的参数cacheData值设置为false，
+         * 注意：如果new PathChildrenCache(client, PATH, cacheData)中的参数cacheData值设置为false，
          * 则示例中的event.getData().getData()、data.getData()将返回null，cache将不会缓存节点数据。
          */
         PathChildrenCache cache = new PathChildrenCache(client, PATH, true);
-        cache.start();
+        cache.start(PathChildrenCache.StartMode.NORMAL);
 
         // 添加一个监听器
         cache.getListenable()

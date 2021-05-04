@@ -35,6 +35,10 @@ public class InterProcessMutexDemo {
         this.resource = resource;
         this.clientName = clientName;
         this.lock = new InterProcessMutex(client, lockPath);
+        // 将锁设为可撤销的. 当别的进程或线程想让你释放锁时Listener会被调用。
+        lock.makeRevocable((forLock -> {
+
+        }));
     }
 
 

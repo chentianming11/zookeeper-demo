@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * 这个锁和上面的InterProcessMutex相比，就是少了Reentrant的功能，也就意味着它不能在同一个线程中重入。
+ * 这个锁和上面的InterProcessMutex相比，就是少了Reentrant的功能，也就意味着它不能在同一个客户端中重入。
  * 这个类是InterProcessSemaphoreMutex,使用方法和InterProcessMutex类似
  *
  */
